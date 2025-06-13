@@ -1,15 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Header() {
+const Header = () => {
   return (
-    <header>
-      <nav>
-        <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none' }}>
-          <li><Link href="/home">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-        </ul>
+    <header className="bg-gray-800 text-white p-4">
+      <nav className="flex gap-4">
+        <Link href="/home" className="hover:underline">Home</Link>
+        <Link href="/about" className="hover:underline">About</Link>
+        <Link href="/posts" className="hover:underline">Posts</Link>
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
